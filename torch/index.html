@@ -1,0 +1,3240 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../header/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Torch - PyMsgbus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pytannic.torch.types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PyMsgbus" class="md-header__button md-logo" aria-label="PyMsgbus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PyMsgbus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Torch
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PyMsgbus" class="md-nav__button md-logo" aria-label="PyMsgbus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PyMsgbus
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../header/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Header
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Torch
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Torch
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.types" class="md-nav__link">
+    <span class="md-ellipsis">
+      types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types--mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      dcodeof
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dcodeof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      dtypeof
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dtypeof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--raises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raises
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      tensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format" class="md-nav__link">
+    <span class="md-ellipsis">
+      format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format--layout-before-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout (before shape):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format--shape-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shape array:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      pack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.pack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.unpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      unpack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unpack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.unpack--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.unpack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      deserialize
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="deserialize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--raises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raises
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      serialize
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="serialize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.format" class="md-nav__link">
+    <span class="md-ellipsis">
+      format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.format--layout-before-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout (before name):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.format--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      pack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.pack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.unpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      unpack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unpack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.unpack--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.unpack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      modules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write" class="md-nav__link">
+    <span class="md-ellipsis">
+      write
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="write">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write--file-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Layout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.types" class="md-nav__link">
+    <span class="md-ellipsis">
+      types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types--mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types--example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      dcodeof
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dcodeof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dcodeof--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      dtypeof
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dtypeof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--raises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raises
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.types.dtypeof--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      tensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format" class="md-nav__link">
+    <span class="md-ellipsis">
+      format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format--layout-before-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout (before shape):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format--shape-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shape array:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.format--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      pack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.pack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.unpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      unpack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unpack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.unpack--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.Metadata.unpack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      deserialize
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="deserialize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--raises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raises
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.deserialize--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      serialize
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="serialize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.tensors.serialize--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters--examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata--attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.format" class="md-nav__link">
+    <span class="md-ellipsis">
+      format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.format--layout-before-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout (before name):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.format--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      pack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.pack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.unpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      unpack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unpack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.unpack--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.parameters.Metadata.unpack--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      modules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write" class="md-nav__link">
+    <span class="md-ellipsis">
+      write
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="write">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write--file-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Layout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytannic.torch.modules.write--notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Torch</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pytannic.torch.types"></a>
+    <div class="doc doc-contents first">
+
+        <p>dtype serialization utilities for tensor clients.</p>
+<p>This module provides a stable mapping between PyTorch <code>torch.dtype</code>
+objects and compact integer codes ("dcodes"). These codes can be used
+to serialize tensor metadata for network protocols, file formats,
+or any client-server interaction involving tensors.</p>
+<h3 id="pytannic.torch.types--mappings">Mappings</h3>
+<div class="highlight"><pre><span></span><code>int8        &lt;-&gt; 12
+int16       &lt;-&gt; 13
+int32       &lt;-&gt; 14
+int64       &lt;-&gt; 15
+float32     &lt;-&gt; 24
+float64     &lt;-&gt; 25
+complex64   &lt;-&gt; 37
+complex128  &lt;-&gt; 38
+</code></pre></div>
+<h3 id="pytannic.torch.types--example">Example</h3>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>from torch import float32, int64
+from dtypes import dcodeof, dtypeof
+dcodeof(float32)
+24
+dtypeof(15)
+torch.int64</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pytannic.torch.types.dcodeof" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">dcodeof</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the integer serialization code ("dcode") for a given <code>torch.dtype</code>.</p>
+<h4 id="pytannic.torch.types.dcodeof--parameters">Parameters</h4>
+<p>dtype : torch.dtype
+    The PyTorch dtype to encode.</p>
+<h4 id="pytannic.torch.types.dcodeof--returns">Returns</h4>
+<p>int
+    The corresponding integer code. Returns <code>0</code> if the dtype is unsupported.</p>
+<h4 id="pytannic.torch.types.dcodeof--examples">Examples</h4>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>dcodeof(torch.float32)
+24
+dcodeof(torch.int16)
+13
+dcodeof(torch.bool)
+0  # not supported</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/types.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dcodeof</span><span class="p">(</span><span class="n">dtype</span><span class="p">:</span> <span class="n">dtype</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the integer serialization code (&quot;dcode&quot;) for a given `torch.dtype`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dtype : torch.dtype</span>
+<span class="sd">        The PyTorch dtype to encode.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The corresponding integer code. Returns `0` if the dtype is unsupported.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; dcodeof(torch.float32)</span>
+<span class="sd">    24</span>
+<span class="sd">    &gt;&gt;&gt; dcodeof(torch.int16)</span>
+<span class="sd">    13</span>
+<span class="sd">    &gt;&gt;&gt; dcodeof(torch.bool)</span>
+<span class="sd">    0  # not supported</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">int8</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">12</span>
+    <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">int16</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">13</span>
+    <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">int32</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">14</span>
+    <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">int64</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">15</span>
+    <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">float32</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">24</span>
+    <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">float64</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">25</span>
+    <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">complex64</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">37</span>
+    <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">complex128</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">38</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>     
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pytannic.torch.types.dtypeof" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">dtypeof</span><span class="p">(</span><span class="n">code</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the <code>torch.dtype</code> corresponding to a serialization code ("dcode").</p>
+<h4 id="pytannic.torch.types.dtypeof--parameters">Parameters</h4>
+<p>code : int
+    The integer code to decode.</p>
+<h4 id="pytannic.torch.types.dtypeof--returns">Returns</h4>
+<p>torch.dtype
+    The corresponding dtype.</p>
+<h4 id="pytannic.torch.types.dtypeof--raises">Raises</h4>
+<p>ValueError
+    If the code is not recognized.</p>
+<h4 id="pytannic.torch.types.dtypeof--examples">Examples</h4>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>dtypeof(24)
+torch.float32
+dtypeof(15)
+torch.int64
+dtypeof(99)
+Traceback (most recent call last):
+    ...
+ValueError: Unknown code</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/types.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dtypeof</span><span class="p">(</span><span class="n">code</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">dtype</span><span class="p">:</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the `torch.dtype` corresponding to a serialization code (&quot;dcode&quot;).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    code : int</span>
+<span class="sd">        The integer code to decode.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    torch.dtype</span>
+<span class="sd">        The corresponding dtype.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the code is not recognized.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; dtypeof(24)</span>
+<span class="sd">    torch.float32</span>
+<span class="sd">    &gt;&gt;&gt; dtypeof(15)</span>
+<span class="sd">    torch.int64</span>
+<span class="sd">    &gt;&gt;&gt; dtypeof(99)</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">        ...</span>
+<span class="sd">    ValueError: Unknown code</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">int8</span>
+    <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">13</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">int16</span>
+    <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">14</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">int32</span>
+    <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">15</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">int64</span>
+    <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">float32</span>
+    <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">25</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">float64</span>
+    <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">37</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">complex64</span>
+    <span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">38</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">complex128</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unknown code&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pytannic.torch.tensors"></a>
+    <div class="doc doc-contents first">
+
+        <p>Tensor serialization utilities for network transport.</p>
+<p>This module defines a compact binary protocol for sending and receiving
+PyTorch tensors across a network. A serialized tensor is laid out as:</p>
+<div class="highlight"><pre><span></span><code>[Header][Metadata][Raw Buffer]
+</code></pre></div>
+<ul>
+<li>The <strong>Header</strong> is defined in <code>pytannic.header.Header</code> and contains
+  basic framing information (magic number, version, checksum, payload size).</li>
+<li>The <strong>Metadata</strong> block encodes dtype, shape, and buffer size.</li>
+<li>The <strong>Raw Buffer</strong> contains contiguous tensor bytes in row-major order.</li>
+</ul>
+<p>Only CPU tensors are supported. GPU tensors are automatically moved
+to CPU before serialization.</p>
+<h3 id="pytannic.torch.tensors--examples">Examples</h3>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import torch
+from pytannic.torch.tensor import serialize, deserialize
+x = torch.arange(6, dtype=torch.int32).reshape(2, 3)
+data = serialize(x)
+y = deserialize(data)
+torch.equal(x, y)
+True</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="pytannic.torch.tensors.Metadata" class="doc doc-heading">
+            <code>Metadata</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Tensor metadata for serialization.</p>
+<h4 id="pytannic.torch.tensors.Metadata--attributes">Attributes</h4>
+<p>dcode : int
+    Encoded dtype (see <code>pytannic.torch.types.dcodeof</code>).
+offset : int
+    Byte offset into the raw buffer (currently always 0).
+nbytes : int
+    Number of bytes in the raw tensor buffer.
+rank : int
+    Tensor rank (number of dimensions).
+shape : tuple[int, ...]
+    Tensor shape as a tuple of dimension sizes.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>pytannic/torch/tensors.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Metadata</span><span class="p">:</span> 
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Tensor metadata for serialization.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dcode : int</span>
+<span class="sd">        Encoded dtype (see `pytannic.torch.types.dcodeof`).</span>
+<span class="sd">    offset : int</span>
+<span class="sd">        Byte offset into the raw buffer (currently always 0).</span>
+<span class="sd">    nbytes : int</span>
+<span class="sd">        Number of bytes in the raw tensor buffer.</span>
+<span class="sd">    rank : int</span>
+<span class="sd">        Tensor rank (number of dimensions).</span>
+<span class="sd">    shape : tuple[int, ...]</span>
+<span class="sd">        Tensor shape as a tuple of dimension sizes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">dcode</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">offset</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">nbytes</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">rank</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">shape</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>  
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">pack</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Serialize the metadata into a binary blob.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bytes</span>
+<span class="sd">            Packed metadata using little-endian struct format.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pack</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dcode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nbytes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">unpack</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">):</span>  
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deserialize a `Metadata` instance from binary data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        data : bytes</span>
+<span class="sd">            Binary blob containing packed metadata.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Metadata</span>
+<span class="sd">            A new `Metadata` instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="s2">&quot;&lt;B Q Q B&quot;</span><span class="p">)</span>
+        <span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;&lt;B Q Q B&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[:</span><span class="n">head</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="n">rank</span><span class="si">}</span><span class="s2">Q&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">head</span><span class="p">:</span><span class="n">head</span> <span class="o">+</span> <span class="n">rank</span> <span class="o">*</span> <span class="mi">8</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">shape</span><span class="p">)</span> 
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span> 
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Struct format string for packing/unpacking tensor metadata.</span>
+
+<span class="sd">        The format is `&quot;&lt;B Q Q B{rank}Q&quot;`, which corresponds to the</span>
+<span class="sd">        following C struct layout in little-endian order (no padding):</span>
+
+<span class="sd">        .. code-block:: cpp</span>
+
+<span class="sd">            struct Metadata&lt;Tensor&gt; {</span>
+<span class="sd">                uint8_t dcode;        // 1 byte</span>
+<span class="sd">                size_t offset;  // 8 bytes</span>
+<span class="sd">                size_t nbytes;  // 8 bytes</span>
+<span class="sd">                uint8_t rank;         // 1 byte</span>
+<span class="sd">                size_t shape[rank]; // 8 bytes each</span>
+<span class="sd">            };</span>
+
+<span class="sd">        Layout (before shape):</span>
+<span class="sd">        ----------------------</span>
+<span class="sd">        - dcode  : 1 byte</span>
+<span class="sd">        - offset : 8 bytes</span>
+<span class="sd">        - nbytes : 8 bytes</span>
+<span class="sd">        - rank   : 1 byte</span>
+<span class="sd">        --------------------------------</span>
+<span class="sd">        Fixed size = 18 bytes + (8 * rank) for shape</span>
+
+<span class="sd">        Shape array:</span>
+<span class="sd">        ------------</span>
+<span class="sd">        - Each dimension size is stored as an `unsigned long long` (8 bytes).</span>
+<span class="sd">        - The number of entries equals `rank`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            A format string of the form `&quot;&lt;B Q Q B{rank}Q&quot;`.</span>
+<span class="sd">        &quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;B Q Q B</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="si">}</span><span class="s2">Q&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="pytannic.torch.tensors.Metadata.format" class="doc doc-heading">
+            <code class="highlight language-python"><span class="nb">format</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Struct format string for packing/unpacking tensor metadata.</p>
+<p>The format is <code>"&lt;B Q Q B{rank}Q"</code>, which corresponds to the
+following C struct layout in little-endian order (no padding):</p>
+<p>.. code-block:: cpp</p>
+<div class="highlight"><pre><span></span><code>struct Metadata&lt;Tensor&gt; {
+    uint8_t dcode;        // 1 byte
+    size_t offset;  // 8 bytes
+    size_t nbytes;  // 8 bytes
+    uint8_t rank;         // 1 byte
+    size_t shape[rank]; // 8 bytes each
+};
+</code></pre></div>
+<h5 id="pytannic.torch.tensors.Metadata.format--layout-before-shape">Layout (before shape):</h5>
+<ul>
+<li>dcode  : 1 byte</li>
+<li>offset : 8 bytes</li>
+<li>nbytes : 8 bytes</li>
+<li>rank   : 1 byte</li>
+</ul>
+<hr />
+<p>Fixed size = 18 bytes + (8 * rank) for shape</p>
+<h5 id="pytannic.torch.tensors.Metadata.format--shape-array">Shape array:</h5>
+<ul>
+<li>Each dimension size is stored as an <code>unsigned long long</code> (8 bytes).</li>
+<li>The number of entries equals <code>rank</code>.</li>
+</ul>
+<h5 id="pytannic.torch.tensors.Metadata.format--returns">Returns</h5>
+<p>str
+    A format string of the form <code>"&lt;B Q Q B{rank}Q"</code>.</p>
+
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="pytannic.torch.tensors.Metadata.pack" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">pack</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize the metadata into a binary blob.</p>
+<h5 id="pytannic.torch.tensors.Metadata.pack--returns">Returns</h5>
+<p>bytes
+    Packed metadata using little-endian struct format.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/tensors.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pack</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Serialize the metadata into a binary blob.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bytes</span>
+<span class="sd">        Packed metadata using little-endian struct format.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">pack</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dcode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nbytes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="pytannic.torch.tensors.Metadata.unpack" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">unpack</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Deserialize a <code>Metadata</code> instance from binary data.</p>
+<h5 id="pytannic.torch.tensors.Metadata.unpack--parameters">Parameters</h5>
+<p>data : bytes
+    Binary blob containing packed metadata.</p>
+<h5 id="pytannic.torch.tensors.Metadata.unpack--returns">Returns</h5>
+<p>Metadata
+    A new <code>Metadata</code> instance.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/tensors.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">unpack</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">):</span>  
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Deserialize a `Metadata` instance from binary data.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : bytes</span>
+<span class="sd">        Binary blob containing packed metadata.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Metadata</span>
+<span class="sd">        A new `Metadata` instance.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="s2">&quot;&lt;B Q Q B&quot;</span><span class="p">)</span>
+    <span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;&lt;B Q Q B&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[:</span><span class="n">head</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="n">rank</span><span class="si">}</span><span class="s2">Q&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">head</span><span class="p">:</span><span class="n">head</span> <span class="o">+</span> <span class="n">rank</span> <span class="o">*</span> <span class="mi">8</span><span class="p">])</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">shape</span><span class="p">)</span> 
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pytannic.torch.tensors.deserialize" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">deserialize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Deserialize a PyTorch tensor from a binary blob.</p>
+<h4 id="pytannic.torch.tensors.deserialize--parameters">Parameters</h4>
+<p>data : bytes
+    A binary blob produced by <code>serialize</code>.</p>
+<h4 id="pytannic.torch.tensors.deserialize--returns">Returns</h4>
+<p>torch.Tensor
+    The reconstructed tensor with the same dtype and shape.</p>
+<h4 id="pytannic.torch.tensors.deserialize--raises">Raises</h4>
+<p>ValueError
+    If the dcode in metadata is not recognized.</p>
+<h4 id="pytannic.torch.tensors.deserialize--notes">Notes</h4>
+<ul>
+<li>Uses <code>torch.frombuffer</code>, so the returned tensor shares memory
+  with the input <code>data</code> buffer when possible.</li>
+</ul>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/tensors.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">deserialize</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Deserialize a PyTorch tensor from a binary blob.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : bytes</span>
+<span class="sd">        A binary blob produced by `serialize`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    torch.Tensor</span>
+<span class="sd">        The reconstructed tensor with the same dtype and shape.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the dcode in metadata is not recognized.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    - Uses `torch.frombuffer`, so the returned tensor shares memory</span>
+<span class="sd">      with the input `data` buffer when possible.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">hsize</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="n">Header</span><span class="o">.</span><span class="n">FORMAT</span><span class="p">)</span> 
+    <span class="n">head</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="s2">&quot;&lt;B Q Q B&quot;</span><span class="p">)</span>
+    <span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;&lt;B Q Q B&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">hsize</span> <span class="p">:</span> <span class="n">hsize</span> <span class="o">+</span> <span class="n">head</span><span class="p">])</span>
+
+    <span class="n">msize</span> <span class="o">=</span> <span class="n">head</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">rank</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">Metadata</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">hsize</span> <span class="p">:</span> <span class="n">hsize</span> <span class="o">+</span> <span class="n">msize</span><span class="p">])</span> 
+    <span class="n">offset</span> <span class="o">=</span> <span class="n">hsize</span> <span class="o">+</span> <span class="n">msize</span>
+    <span class="n">buffer</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">nbytes</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">frombuffer</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtypeof</span><span class="p">(</span><span class="n">dcode</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pytannic.torch.tensors.serialize" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">serialize</span><span class="p">(</span><span class="n">tensor</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize a PyTorch tensor into a binary blob for network transport.</p>
+<h4 id="pytannic.torch.tensors.serialize--parameters">Parameters</h4>
+<p>tensor : torch.Tensor
+    Input tensor. If the tensor is on a GPU, it will be moved to CPU.</p>
+<h4 id="pytannic.torch.tensors.serialize--returns">Returns</h4>
+<p>bytes
+    A binary blob representing the tensor, consisting of:</p>
+<div class="highlight"><pre><span></span><code>- Header
+- Metadata
+- Raw buffer (tensor bytes)
+</code></pre></div>
+<h4 id="pytannic.torch.tensors.serialize--notes">Notes</h4>
+<ul>
+<li>Only contiguous CPU tensors are supported.</li>
+<li>Dtype is encoded using <code>dcodeof</code>.</li>
+</ul>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/tensors.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">serialize</span><span class="p">(</span><span class="n">tensor</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Serialize a PyTorch tensor into a binary blob for network transport.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    tensor : torch.Tensor</span>
+<span class="sd">        Input tensor. If the tensor is on a GPU, it will be moved to CPU.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bytes</span>
+<span class="sd">        A binary blob representing the tensor, consisting of:</span>
+
+<span class="sd">        - Header</span>
+<span class="sd">        - Metadata</span>
+<span class="sd">        - Raw buffer (tensor bytes)</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    - Only contiguous CPU tensors are supported.</span>
+<span class="sd">    - Dtype is encoded using `dcodeof`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">tensor</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="s1">&#39;cpu&#39;</span><span class="p">:</span>
+        <span class="n">tensor</span> <span class="o">=</span> <span class="n">tensor</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
+
+    <span class="n">rank</span> <span class="o">=</span> <span class="n">tensor</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span>
+    <span class="n">shape</span>  <span class="o">=</span> <span class="n">tensor</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">buffer</span> <span class="o">=</span> <span class="n">tensor</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()</span> 
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">Metadata</span><span class="p">(</span><span class="n">dcode</span><span class="o">=</span><span class="n">dcodeof</span><span class="p">(</span><span class="n">tensor</span><span class="o">.</span><span class="n">dtype</span><span class="p">),</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nbytes</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">buffer</span><span class="p">),</span> <span class="n">rank</span><span class="o">=</span><span class="n">rank</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span>  
+    <span class="n">header</span> <span class="o">=</span> <span class="n">Header</span><span class="p">(</span><span class="n">magic</span><span class="o">=</span><span class="n">MAGIC</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">checksum</span><span class="o">=</span><span class="mh">0xABCD</span> <span class="p">,</span> <span class="n">nbytes</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">format</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> 
+    <span class="k">return</span> <span class="n">header</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span> <span class="o">+</span> <span class="n">metadata</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span><span class="o">+</span> <span class="n">buffer</span> 
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pytannic.torch.parameters"></a>
+    <div class="doc doc-contents first">
+
+        <p>Parameter metadata serialization.</p>
+<p>Unlike tensor payloads (which are typically transmitted over the network),
+parameters are usually <strong>stored in files</strong> (e.g., model checkpoints).
+This module defines a binary metadata structure for describing
+individual named tensor parameters.</p>
+<p>The binary layout is:</p>
+<div class="highlight"><pre><span></span><code>[dcode (1B)][offset (8B)][nbytes (8B)][namelength (4B)][name (bytes)]
+</code></pre></div>
+<h3 id="pytannic.torch.parameters--attributes">Attributes</h3>
+<ul>
+<li><strong>dcode</strong> : dtype code (see <code>pytannic.torch.types.dcodeof</code>)</li>
+<li><strong>offset</strong> : byte offset to parameter data within the file</li>
+<li><strong>nbytes</strong> : number of bytes of parameter data</li>
+<li><strong>namelength</strong> : length of the name in bytes</li>
+<li><strong>name</strong> : parameter name (string)</li>
+</ul>
+<h3 id="pytannic.torch.parameters--examples">Examples</h3>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>m = Metadata(dcode=24, offset=128, nbytes=4096, namelength=4, name="fc1")
+blob = m.pack()
+Metadata.unpack(blob)
+Metadata(dcode=24, offset=128, nbytes=4096, namelength=4, name='')</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="pytannic.torch.parameters.Metadata" class="doc doc-heading">
+            <code>Metadata</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Metadata structure for a named parameter.</p>
+<h4 id="pytannic.torch.parameters.Metadata--attributes">Attributes</h4>
+<p>dcode : int
+    Encoded dtype for the parameter (see <code>pytannic.torch.types.dcodeof</code>).
+offset : int
+    Byte offset in the file where the parameter data begins.
+nbytes : int
+    Size of the parameter data in bytes.
+namelength : int
+    Length of the parameter name in bytes.
+name : str
+    Parameter name. Currently not packed/unpacked automatically.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>pytannic/torch/parameters.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Metadata</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metadata structure for a named parameter.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dcode : int</span>
+<span class="sd">        Encoded dtype for the parameter (see `pytannic.torch.types.dcodeof`).</span>
+<span class="sd">    offset : int</span>
+<span class="sd">        Byte offset in the file where the parameter data begins.</span>
+<span class="sd">    nbytes : int</span>
+<span class="sd">        Size of the parameter data in bytes.</span>
+<span class="sd">    namelength : int</span>
+<span class="sd">        Length of the parameter name in bytes.</span>
+<span class="sd">    name : str</span>
+<span class="sd">        Parameter name. Currently not packed/unpacked automatically.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dcode</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">offset</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">nbytes</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">namelength</span><span class="p">:</span> <span class="nb">int</span>  
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="n">FORMAT</span> <span class="o">=</span> <span class="s2">&quot;&lt;B Q Q I&quot;</span>   
+    <span class="k">def</span><span class="w"> </span><span class="nf">pack</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span> 
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Serialize metadata into a binary blob.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bytes</span>
+<span class="sd">            Packed metadata (excluding the parameter name).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pack</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FORMAT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dcode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nbytes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">namelength</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">unpack</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deserialize metadata from a binary blob.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        data : bytes</span>
+<span class="sd">            Raw binary data containing packed metadata.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Metadata</span>
+<span class="sd">            A new `Metadata` instance. The `name` field is left empty,</span>
+<span class="sd">            since it must be read separately from the stream.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fsize</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">FORMAT</span><span class="p">)</span>
+        <span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">namelength</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">FORMAT</span><span class="p">,</span> <span class="n">data</span><span class="p">[:</span><span class="n">fsize</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">dcode</span><span class="o">=</span><span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="o">=</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">namelength</span><span class="o">=</span><span class="n">namelength</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Struct format string for this metadata.</span>
+
+<span class="sd">        The format is `&quot;&lt;B Q Q I&quot;`, which corresponds to the following</span>
+<span class="sd">        C struct layout in little-endian order (no padding):</span>
+
+<span class="sd">        .. code-block:: cpp</span>
+
+<span class="sd">        struct Metadata&lt;nn::Parameter&gt; {</span>
+<span class="sd">            uint8_t dcode;        // 1 byte</span>
+<span class="sd">            size_t offset;        // 8 bytes</span>
+<span class="sd">            size_t long nbytes;   // 8 bytes</span>
+<span class="sd">            uint16_t namelength;  // 4 bytes </span>
+<span class="sd">        };</span>
+
+<span class="sd">        Layout (before name):</span>
+<span class="sd">        ---------------------</span>
+<span class="sd">        - dcode      : 1 byte</span>
+<span class="sd">        - offset     : 8 bytes</span>
+<span class="sd">        - nbytes     : 8 bytes</span>
+<span class="sd">        - namelength : 4 bytes</span>
+<span class="sd">        --------------------------------</span>
+<span class="sd">        Total        : 21 bytes + name</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            Always `&quot;&lt;B Q Q I&quot;`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">FORMAT</span>  
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="pytannic.torch.parameters.Metadata.format" class="doc doc-heading">
+            <code class="highlight language-python"><span class="nb">format</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Struct format string for this metadata.</p>
+<p>The format is <code>"&lt;B Q Q I"</code>, which corresponds to the following
+C struct layout in little-endian order (no padding):</p>
+<p>.. code-block:: cpp</p>
+<p>struct Metadata<nn::Parameter> {
+    uint8_t dcode;        // 1 byte
+    size_t offset;        // 8 bytes
+    size_t long nbytes;   // 8 bytes
+    uint16_t namelength;  // 4 bytes 
+};</p>
+<h5 id="pytannic.torch.parameters.Metadata.format--layout-before-name">Layout (before name):</h5>
+<ul>
+<li>dcode      : 1 byte</li>
+<li>offset     : 8 bytes</li>
+<li>nbytes     : 8 bytes</li>
+<li>namelength : 4 bytes</li>
+</ul>
+<hr />
+<p>Total        : 21 bytes + name</p>
+<h5 id="pytannic.torch.parameters.Metadata.format--returns">Returns</h5>
+<p>str
+    Always <code>"&lt;B Q Q I"</code>.</p>
+
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="pytannic.torch.parameters.Metadata.pack" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">pack</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize metadata into a binary blob.</p>
+<h5 id="pytannic.torch.parameters.Metadata.pack--returns">Returns</h5>
+<p>bytes
+    Packed metadata (excluding the parameter name).</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/parameters.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pack</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span> 
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Serialize metadata into a binary blob.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bytes</span>
+<span class="sd">        Packed metadata (excluding the parameter name).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">pack</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FORMAT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dcode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nbytes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">namelength</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="pytannic.torch.parameters.Metadata.unpack" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">unpack</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Deserialize metadata from a binary blob.</p>
+<h5 id="pytannic.torch.parameters.Metadata.unpack--parameters">Parameters</h5>
+<p>data : bytes
+    Raw binary data containing packed metadata.</p>
+<h5 id="pytannic.torch.parameters.Metadata.unpack--returns">Returns</h5>
+<p>Metadata
+    A new <code>Metadata</code> instance. The <code>name</code> field is left empty,
+    since it must be read separately from the stream.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/parameters.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">unpack</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Deserialize metadata from a binary blob.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : bytes</span>
+<span class="sd">        Raw binary data containing packed metadata.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Metadata</span>
+<span class="sd">        A new `Metadata` instance. The `name` field is left empty,</span>
+<span class="sd">        since it must be read separately from the stream.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fsize</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">FORMAT</span><span class="p">)</span>
+    <span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">namelength</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">FORMAT</span><span class="p">,</span> <span class="n">data</span><span class="p">[:</span><span class="n">fsize</span><span class="p">])</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">dcode</span><span class="o">=</span><span class="n">dcode</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">nbytes</span><span class="o">=</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">namelength</span><span class="o">=</span><span class="n">namelength</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="pytannic.torch.modules"></a>
+    <div class="doc doc-contents first">
+
+        <p>Module serialization for checkpointing.</p>
+<p>This module provides utilities to serialize a PyTorch <code>torch.nn.Module</code>
+into two companion binary files:</p>
+<ol>
+<li><strong>Weights file</strong> (<code>.tannic</code>)<br />
+   Contains raw parameter tensors stored back-to-back.</li>
+</ol>
+<p>Layout:
+       [Header][TensorBytes...]</p>
+<ul>
+<li><code>Header</code> = <code>pytannic.header.Header</code></li>
+<li>
+<p>Each parameter is written as a raw contiguous CPU buffer
+     in the order returned by <code>state_dict()</code>.</p>
+</li>
+<li>
+<p><strong>Metadata file</strong> (<code>.metadata.tannic</code>)<br />
+   Contains parameter descriptors (dtype, offset, name, etc.).</p>
+</li>
+</ul>
+<p>Layout:
+       [Header][Metadata1][Name1][Metadata2][Name2]...</p>
+<ul>
+<li><code>Header</code> = <code>pytannic.header.Header</code></li>
+<li>Each <code>Metadata</code> = <code>pytannic.torch.parameters.Metadata</code></li>
+<li><code>Name</code> is stored as UTF-8 with length <code>namelength</code></li>
+</ul>
+<p>These two files together allow reconstructing the module parameters.</p>
+<h3 id="pytannic.torch.modules--notes">Notes</h3>
+<ul>
+<li>Parameters are always written in <strong>CPU memory order</strong>.</li>
+<li>Gradients are not serialized (only <code>.data</code>).</li>
+<li>Offsets in metadata are relative to the weights file.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pytannic.torch.modules.write" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">write</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize a <code>torch.nn.Module</code> into <code>.tannic</code> files.</p>
+<h4 id="pytannic.torch.modules.write--parameters">Parameters</h4>
+<p>module : torch.nn.Module
+    The PyTorch module to serialize. Only parameters from
+    <code>module.state_dict()</code> are saved.
+filename : str
+    Base filename for output. Two files are written:</p>
+<div class="highlight"><pre><span></span><code>- `&lt;stem&gt;.tannic` for raw parameter data
+- `&lt;stem&gt;.metadata.tannic` for metadata
+</code></pre></div>
+<h4 id="pytannic.torch.modules.write--file-layout">File Layout</h4>
+<p><strong>Weights file (<code>.tannic</code>):</strong></p>
+<p>.. code-block:: cpp </p>
+<div class="highlight"><pre><span></span><code>struct Header header;
+unsigned char buffer[];   // concatenated tensor data
+</code></pre></div>
+<p><strong>Metadata file (<code>.metadata.tannic</code>):</strong></p>
+<p>.. code-block:: cpp</p>
+<div class="highlight"><pre><span></span><code>struct Header header;
+struct Metadata&lt;nn::Parameter&gt; {
+    uint8_t dcode;        // 1 byte
+    size_t offset;        // 8 bytes
+    size_t long nbytes;   // 8 bytes
+    uint16_t namelength;  // 4 bytes 
+};
+</code></pre></div>
+<h4 id="pytannic.torch.modules.write--notes">Notes</h4>
+<ul>
+<li>The two files must always be kept together.</li>
+<li>The header <code>nbytes</code> field includes only payload size
+  (not counting the header itself).</li>
+</ul>
+
+
+            <details class="quote">
+              <summary>Source code in <code>pytannic/torch/modules.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Serialize a `torch.nn.Module` into `.tannic` files.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    module : torch.nn.Module</span>
+<span class="sd">        The PyTorch module to serialize. Only parameters from</span>
+<span class="sd">        `module.state_dict()` are saved.</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        Base filename for output. Two files are written:</span>
+
+<span class="sd">        - `&lt;stem&gt;.tannic` for raw parameter data</span>
+<span class="sd">        - `&lt;stem&gt;.metadata.tannic` for metadata</span>
+
+<span class="sd">    File Layout</span>
+<span class="sd">    -----------</span>
+<span class="sd">    **Weights file (`.tannic`):**</span>
+
+<span class="sd">    .. code-block:: cpp </span>
+
+<span class="sd">        struct Header header;</span>
+<span class="sd">        unsigned char buffer[];   // concatenated tensor data</span>
+
+<span class="sd">    **Metadata file (`.metadata.tannic`):**</span>
+
+<span class="sd">    .. code-block:: cpp</span>
+
+<span class="sd">        struct Header header;</span>
+<span class="sd">        struct Metadata&lt;nn::Parameter&gt; {</span>
+<span class="sd">            uint8_t dcode;        // 1 byte</span>
+<span class="sd">            size_t offset;        // 8 bytes</span>
+<span class="sd">            size_t long nbytes;   // 8 bytes</span>
+<span class="sd">            uint16_t namelength;  // 4 bytes </span>
+<span class="sd">        }; </span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    - The two files must always be kept together.</span>
+<span class="sd">    - The header `nbytes` field includes only payload size</span>
+<span class="sd">      (not counting the header itself).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> 
+    <span class="n">state</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Parameter</span><span class="p">]</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Metadata</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s1">.tannic&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>   
+        <span class="n">nbytes</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">parameter</span><span class="o">.</span><span class="n">nbytes</span> <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span> 
+        <span class="n">header</span> <span class="o">=</span> <span class="n">Header</span><span class="p">(</span><span class="n">magic</span><span class="o">=</span><span class="n">MAGIC</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">checksum</span><span class="o">=</span><span class="mh">0xABCD</span><span class="p">,</span> <span class="n">nbytes</span><span class="o">=</span><span class="n">nbytes</span><span class="p">)</span> 
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">pack</span><span class="p">())</span>  
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">state</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  
+            <span class="n">metadata</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Metadata</span><span class="p">(</span> 
+                <span class="n">dcode</span><span class="o">=</span><span class="n">dcodeof</span><span class="p">(</span><span class="n">parameter</span><span class="o">.</span><span class="n">dtype</span><span class="p">),</span>
+                <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+                <span class="n">nbytes</span><span class="o">=</span><span class="n">parameter</span><span class="o">.</span><span class="n">nbytes</span><span class="p">,</span>   
+                <span class="n">namelength</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">),</span>
+                <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>  
+            <span class="p">))</span> 
+            <span class="n">offset</span> <span class="o">+=</span> <span class="n">parameter</span><span class="o">.</span><span class="n">nbytes</span>   
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">parameter</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">tobytes</span><span class="p">())</span>   
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s1">.metadata.tannic&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>     
+        <span class="n">nbytes</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">calcsize</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">format</span><span class="p">)</span> <span class="o">+</span> <span class="n">obj</span><span class="o">.</span><span class="n">namelength</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">metadata</span><span class="p">)</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="n">Header</span><span class="p">(</span><span class="n">magic</span><span class="o">=</span><span class="n">MAGIC</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">checksum</span><span class="o">=</span><span class="mh">0xABCD</span><span class="p">,</span> <span class="n">nbytes</span><span class="o">=</span><span class="n">nbytes</span><span class="p">)</span> 
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">pack</span><span class="p">())</span>  
+        <span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+        <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">metadata</span><span class="p">:</span> 
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">object</span><span class="o">.</span><span class="n">pack</span><span class="p">())</span>       
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.code.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
