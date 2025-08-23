@@ -1,7 +1,8 @@
 # PyTannic
+
 Python bindings for the Tannic framework. 
 
-**PyTannic** is a Python library for interacting with the [Tannic-NN](https://github.com/entropy-flux/Tannic-NN) framework. It provides utilities for serializing PyTorch models, handling metadata, and sending/receiving tensor data over TCP in a format compatible with Tannic-NN.
+**PyTannic** is a Python library for interacting with the [Tannic-NN](https://github.com/entropy-flux/Tannic-NN) framework. It provides utilities for serializing PyTorch models, handling metadata, and sending/receiving tensor data over TCP in a format compatible with Tannic-NN. 
 
 ---
 
@@ -49,7 +50,8 @@ This will allow you to easily create inference servers in C++. For a complete MN
 
 ## License
 
-PyTannic is licensed under the Apache License, Version 2.0. See the LICENSE file for details.
-
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
+
+Tannic is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
+ 
 
