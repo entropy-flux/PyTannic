@@ -28,4 +28,24 @@ def dcodeof(dtype: dtype):
     elif dtype == complex128:
         return 38
     else:
-        return 0      
+        return 0     
+    
+def dtypeof(code: int) -> dtype:
+    if code == 12:
+        return int8
+    elif code == 13:
+        return int16
+    elif code == 14:
+        return int32
+    elif code == 15:
+        return int64
+    elif code == 24:
+        return float32
+    elif code == 25:
+        return float64
+    elif code == 37:
+        return complex64
+    elif code == 38:
+        return complex128
+    else:
+        raise ValueError("Unknown code")
