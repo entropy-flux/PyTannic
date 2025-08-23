@@ -1,21 +1,14 @@
 [tool.poetry]
 name = "pytannic"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python bindings for the Tannic framework"
 authors = ["entropy-flux <eric.hermosis@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12,<3.14"
 pytest = "^8.4.1"
-torch = "^2.7.1"
-numpy = "^2.3.1"
-torchvision = "^0.22.1"
-matplotlib = "^3.10.3"
-torcheval = "^0.0.7"
-torchsystem = "^1.4.4"
-mltracker = "^0.2.5"
 
 
 [tool.poetry.group.docs.dependencies]
@@ -24,6 +17,11 @@ mkdocs-material = "^9.6.18"
 pymdown-extensions = "^10.16.1"
 mkdocstrings = "^0.30.0"
 mkdocstrings-python = "^1.17.0"
+
+
+
+[tool.poetry.group.tests.dependencies]
+torch = {version = "^2.8.0", extras = ["cpu"]}
 
 [build-system]
 requires = ["poetry-core"]
