@@ -2,8 +2,8 @@
 name = "pytannic"
 version = "0.1.0"
 description = "Python bindings for the Tannic framework"
-authors = ["entropy-flux <eric.hermosis.com>"]
-license = "MIT"
+authors = ["entropy-flux <eric.hermosis@gmail.com>"]
+license = "Apache-2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
