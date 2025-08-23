@@ -22,6 +22,7 @@ mkdocstrings-python = "^1.17.0"
 
 [tool.poetry.group.tests.dependencies]
 torch = {version = "^2.8.0", extras = ["cpu"]}
+numpy = "^2.3.2"
 
 [build-system]
 requires = ["poetry-core"]
