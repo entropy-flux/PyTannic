@@ -18,6 +18,13 @@ torchsystem = "^1.4.4"
 mltracker = "^0.2.5"
 
 
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.6.18"
+pymdown-extensions = "^10.16.1"
+mkdocstrings = "^0.30.0"
+mkdocstrings-python = "^1.17.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
