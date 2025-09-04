@@ -24,6 +24,8 @@ Mappings
     int16       <-> 13
     int32       <-> 14
     int64       <-> 15
+    float16     <-> 23
+    bfloat16    <-> 231
     float32     <-> 24
     float64     <-> 25
     complex64   <-> 37
@@ -45,6 +47,8 @@ from torch import (
     int16,
     int32,
     int64,
+    float16,
+    bfloat16,
     float32,
     float64,
     complex64,
@@ -83,6 +87,10 @@ def dcodeof(dtype: dtype):
         return 14
     elif dtype == int64:
         return 15
+    elif dtype == float16:
+        return 231
+    elif dtype == float16:
+        return 23
     elif dtype == float32:
         return 24
     elif dtype == float64:
@@ -134,6 +142,10 @@ def dtypeof(code: int) -> dtype:
         return int32
     elif code == 15:
         return int64
+    elif code == 23:
+        return float16
+    elif code == 231:
+        return bfloat16
     elif code == 24:
         return float32
     elif code == 25:
